@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- <link rel="stylesheet" href="foundation.min.css"/>
+		<link rel="stylesheet" type="text/css"  href="css.css"/> -->
+		 <%= stylesheet_link_tag    'application', media: 'all'%>
+  		 <%= javascript_include_tag 'application'%>
+  		 <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<header >
+		<% if user_signed_in? %>
+	      	Logged in as <strong><%= current_user.email %></strong>.
+	      	<%= link_to 'Edit profile', edit_user_registration_path %> |
+	      	<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+	    <% else %>
+      		<%= link_to "Sign up", new_user_registration_path %> |
+      		<%= link_to "Login", new_user_session_path %>
+      		<% flash.each do |name, msg| %>
+    			<%= content_tag :div, msg, id: "flash_#{name}" %>
+  			<% end %>
+    	<% end %>
+		</header>
+		<aside>
+			<%= link_to("twitter", user_omniauth_authorize_path(:twitter))%>
+		</aside>	
+		<div class="body">
+			<div class="row">
+				<div class="small-6 columns thing1">twitta</div>
+				<%= yield %>
+
+				<div class="small-4 columns thing2">carlibro</div>
+				<div class="small-4 columns thing3">veinte</div>
+
+			</div>		
+		</div>	
+
+
+	</body>
+</html>

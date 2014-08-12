@@ -1,0 +1,42 @@
+header {
+	background-color	:rgba(179, 0, 250, 0.58);
+	text-align			:center;
+	top:0px;
+	left:0px;
+	right:0px;
+	height:50px;
+}
+aside {
+	width				:7%;
+	background-color	:rgba(0, 90, 178, 0.6);
+	text-align			:center;
+	top					:50px;
+	bottom				:0px;
+	position			:absolute; 
+
+}
+.body {
+	position			:absolute;	 
+	width				:93%;
+	background-color	:rgba(167, 25, 115, 0.6);	
+	text-align			:center;
+	top					:50px;
+	bottom				:0px;
+	right				:0px;
+	padding				:0px;
+
+}
+.thing1{
+	background-color:blue;
+}
+.thing2{
+	background-color:red;
+}
+.thing3{
+	background-color:purple;
+	float			:right;
+}
+.row{
+	margin		:0px;
+	bottom		:0px; 
+}
