@@ -5,9 +5,8 @@ class ApplicationController < ActionController::Base
    before_filter :twitterclient
   def twitterclient
 		@client = Twitter::REST::Client.new do |config|
-		  config.consumer_key        = 'consumer_key'
-		  config.consumer_secret     = 'consumer_secret'
-		  
-		end
+      config.consumer_key        = 'appkey'
+      config.consumer_secret     = 'appsecretkey'
+    end
   end
 end
