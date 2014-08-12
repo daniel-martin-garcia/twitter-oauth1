@@ -11,6 +11,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   #     redirect_to new_user_registration_url
   #   end
   # end
+  def facebook
+    flash[:notice] = "Hola"
+  end
+  
   def twitter
     flash[:notice] = "Hola"
     # You need to implement the method below in your model (e.g. app/models/user.rb)

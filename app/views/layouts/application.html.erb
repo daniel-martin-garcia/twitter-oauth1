@@ -22,7 +22,8 @@
     	<% end %>
 		</header>
 		<aside>
-			<%= link_to("twitter", user_omniauth_authorize_path(:twitter))%>
+			<%= link_to("twitter", user_omniauth_authorize_path(:twitter))%><br />
+			<%= link_to "Facebook", user_omniauth_authorize_path(:facebook) %>
 		</aside>	
 		<div class="body">
 			<div class="row">
