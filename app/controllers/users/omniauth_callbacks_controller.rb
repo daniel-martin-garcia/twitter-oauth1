@@ -13,6 +13,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # end
   def facebook
     flash[:notice] = "Hola"
+    redirect_to "/"
   end
   
   def twitter
